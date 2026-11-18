@@ -90,6 +90,16 @@ section.block p.sub{font-size:16.5px;font-weight:600;max-width:600px}
 .dlcard ul li{padding:6px 0 6px 30px;position:relative;font-weight:600;border-bottom:1px dashed var(--line);font-size:14.5px}
 .dlcard ul li:last-child{border-bottom:none}
 .dlcard ul li::before{content:"";position:absolute;left:2px;top:12px;width:16px;height:16px;border:2px solid var(--rose);border-radius:5px}
+.dlcard.why p{font-size:15px;font-weight:500;line-height:1.55;margin:10px 0}
+.ptoc{margin-top:26px;border:1px solid var(--line);border-radius:18px;background:var(--card);overflow:hidden}
+.ptoc .ptoch{font-size:12px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:var(--rose);padding:15px 16px 10px}
+.ptoc a{display:flex;align-items:center;gap:14px;padding:13px 16px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;border-top:1px solid var(--line)}
+.ptoc a:active{background:var(--powder)}
+.ptoc a .n{font-family:'Bebas Neue',Impact,sans-serif;font-size:21px;letter-spacing:1px;color:var(--rose);min-width:24px}
+.ptoc a .arr{margin-left:auto;color:var(--rose);font-size:17px}
+.pcard{scroll-margin-top:78px}
+.block{scroll-margin-top:64px}
+html{scroll-behavior:smooth}
 .netmini{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
 .netmini .n{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
 .netmini .n b{font-size:14.5px}
@@ -185,8 +195,21 @@ footer .tiny{margin-top:10px;font-size:12px;color:var(--grey);font-weight:600}
         <li>Отправь. Если ИИ задаст вопросы, ответь своими словами: чем больше живых деталей, тем лучше тексты.</li>
       </ol>
     </div>
+    <div class="dlcard why">
+      <h3>Почему промптов пять</h3>
+      <p>У блога разные задачи, и на каждую свой инструмент. <b>01</b> настраивает ИИ под тебя: заполняешь один раз, и дальше ИИ знает твой блог и пишет твоим голосом. <b>02</b> показывает, кто твой читатель и что его волнует. <b>03</b> приносит идеи рилсов именно под этого читателя. <b>04</b> упаковывает идею в первую фразу, от которой не пролистывают. <b>05</b> собирает из идеи готовый сценарий ролика.</p>
+      <p>Промпты работают в связке: сначала 01 и 02, а дальше каждое новое видео рождается шагами 03, 04 и 05. Чем чаще возвращаешься к мастер-промпту и обновляешь свои цифры, тем точнее получаются остальные. Это одна система, а не пять случайных текстов, поэтому пользуйся всеми.</p>
+    </div>
+    <nav class="ptoc" aria-label="Оглавление промптов">
+      <div class="ptoch">Выбери промпт и перейди сразу к нему</div>
+      <a href="#p1"><span class="n">01</span>Мастер-промпт: контент и развитие блога<span class="arr">↓</span></a>
+      <a href="#p2"><span class="n">02</span>Анализ целевой аудитории<span class="arr">↓</span></a>
+      <a href="#p3"><span class="n">03</span>20 идей рилсов по теме<span class="arr">↓</span></a>
+      <a href="#p4"><span class="n">04</span>10 хуков для рилса<span class="arr">↓</span></a>
+      <a href="#p5"><span class="n">05</span>Сценарий Reels<span class="arr">↓</span></a>
+    </nav>
 
-    <div class="pcard">
+    <div class="pcard" id="p1">
       <div class="pnum">01</div>
       <h3 class="ptitle">Мастер-промпт: контент и развитие блога</h3>
       <p class="pintro">Вставь промпт в начало нового чата с ИИ и заполни розовые строки. Дальше просто давай команды из раздела «Режимы работы», а цифры недели обновляй раз в неделю.</p>
@@ -319,7 +342,7 @@ footer .tiny{margin-top:10px;font-size:12px;color:var(--grey);font-weight:600}
       <p>Если хоть на один пункт ответ «нет» — исправь до того, как показать мне.</p>
     </div>
 
-    <div class="pcard">
+    <div class="pcard" id="p2">
       <div class="pnum">02</div>
       <h3 class="ptitle">Анализ целевой аудитории</h3>
       <p class="pintro">Скопируй текст в чат с ИИ и заполни две строки в квадратных скобках. Если данных мало, промпт сам задаст вопросы и дождётся ответа.</p>
@@ -376,7 +399,7 @@ footer .tiny{margin-top:10px;font-size:12px;color:var(--grey);font-weight:600}
       </ol>
     </div>
 
-    <div class="pcard">
+    <div class="pcard" id="p3">
       <div class="pnum">03</div>
       <h3 class="ptitle">20 идей рилсов по теме</h3>
       <p class="pintro">Скопируй текст в чат с ИИ, в конце впиши свои темы через запятую. Хватит одного раза на сессию — дальше можно просить новые идеи короткими командами.</p>
@@ -427,7 +450,7 @@ footer .tiny{margin-top:10px;font-size:12px;color:var(--grey);font-weight:600}
       <p>Мои темы: [впиши темы через запятую]</p>
     </div>
 
-    <div class="pcard">
+    <div class="pcard" id="p4">
       <div class="pnum">04</div>
       <h3 class="ptitle">10 хуков для рилса</h3>
       <p class="pintro">Скопируй текст в чат с ИИ, в конце впиши тему рилса.</p>
@@ -481,7 +504,7 @@ footer .tiny{margin-top:10px;font-size:12px;color:var(--grey);font-weight:600}
       <p>Тема рилса: [впиши тему]</p>
     </div>
 
-    <div class="pcard">
+    <div class="pcard" id="p5">
       <div class="pnum">05</div>
       <h3 class="ptitle">Сценарий Reels</h3>
       <p class="pintro">Скопируй текст в чат с ИИ, в конце впиши свой хук. Если хука ещё нет, вместо него можно вписать тему — ИИ сначала предложит хуки.</p>
